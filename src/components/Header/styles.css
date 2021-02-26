@@ -1,0 +1,20 @@
+.logo {
+  width: 24px;
+  /* justify-content: flex-start; */
+}
+
+.navbar-text-truncate {
+  /* margin-right: 50px; */
+  font-size: 16px;
+}
+
+.navbar {
+  background-color: var(--white);
+  color: var(--secondary);
+  height: 64px;
+}
+
+.lexicon-icon {
+  font-size: 16px !important;
+  color: var(--secondary) !important;
+}
