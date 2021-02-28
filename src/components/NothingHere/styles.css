@@ -1,0 +1,46 @@
+.dataset-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.dataset-container > img {
+  width: 12rem;
+  height: 12rem;
+
+  /* border-radius: 50%; */
+}
+
+.dataset-container > div {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.dataset-container div strong {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.dataset-container div p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: var(--secondary);
+}
+
+/* .dataset-container div p img {
+   margin-right: 0.5rem;
+} */
