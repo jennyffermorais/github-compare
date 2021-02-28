@@ -8,6 +8,8 @@ import star from "../../images/star.svg";
 import adjust from "../../images/adjust.svg";
 import cards from "../../images/cards.svg";
 import button from "../../images/button.svg";
+import filterButton from "../../images/filter-button.svg";
+
 
 export function Header() {
   return (
@@ -24,19 +26,27 @@ export function Header() {
           </li>
           <li class="nav-item">
             <div class="navbar-text-truncate">Filter and order</div>
+         
+        
+            <a class="nav-link nav-link-monospaced" href="#1" role="button">
+              <img className="filterButton" src={filterButton} alt="filterButton" />
+            </a>
           </li>
         </ul>
-        <div class="input-group-item">
-          <input
-            class="form-control input-group-inset input-group-inset-after"
-            placeholder="Search"
-            type="text"
-          />
-          <span class="input-group-inset-item input-group-inset-item-after">
-            <button class="btn btn-unstyled" type="button">
-              <img className="search" src={search} alt="search" />
-            </button>
-          </span>
+        <div class="input-group input-group-sm">
+          <div class="input-group-item">
+            <input
+              class="form-control input-group-inset input-group-inset-after"
+              placeholder="Search"
+              type="text"
+              // style={{ width: "50%" }}
+            />
+            <span class="input-group-inset-item input-group-inset-item-after">
+              <button class="btn btn-unstyled" type="button">
+                <img className="search" src={search} alt="search" />
+              </button>
+            </span>
+          </div>
         </div>
         <div class=" navbar-text-truncate"></div>
         <ul class="navbar-nav">
