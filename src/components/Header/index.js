@@ -1,5 +1,7 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import ClayButton from "@clayui/button";
+import ClayIcon, { ClayIconSpriteContext } from "@clayui/icon";
+import gitHubService from "../../services/github-service";
 import "./styles.css";
 import "../../styles/global.css";
 import logo from "../../images/Vector.svg";
@@ -7,104 +9,162 @@ import search from "../../images/search.svg";
 import star from "../../images/star.svg";
 import adjust from "../../images/adjust.svg";
 import cards from "../../images/cards.svg";
-import button from "../../images/button.svg";
+import buttonAdd from "../../images/buttonAdd.svg";
 import filterButton from "../../images/filter-button.svg";
 
+import { connect, useSelector, useDispatch } from "react-redux";
+import { addRepoAction } from "../../actions";
 
-export function Header() {
+const Header = (props) => {
+  let [inShow, setInShow] = useState("");
+  let [inputRepo, setInputRepo] = useState("");
+
+  const actions = useDispatch();
+
+  function toggleAddForm() {
+    setInShow(inShow == "" ? "show" : "");
+  }
+
+  function addRepositoryHandler() {
+    gitHubService(inputRepo).then((repo) => {
+      actions(addRepoAction(repo.data));
+    });
+  }
+
+  useEffect(() => {}, []);
+
   return (
-    <nav class="application-bar application-bar-dark navbar navbar-expand-md">
-      <div class="container-fluid container-fluid-max-xl">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link nav-link-monospaced" href="#1" role="button">
+    <nav className="application-bar application-bar-dark navbar navbar-expand-md">
+      <div className="container-fluid container-fluid-max-xl">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <a className="nav-link nav-link-monospaced" href="#1" role="button">
               <img className="logo" src={logo} alt="logo" />
             </a>
           </li>
-          <li class="nav-item">
-            <div class="navbar-text-truncate">Github Compare</div>
+          <li className="nav-item">
+            <div className="navbar-text-truncate">Github Compare</div>
           </li>
-          <li class="nav-item">
-            <div class="navbar-text-truncate">Filter and order</div>
-         
-        
-            <a class="nav-link nav-link-monospaced" href="#1" role="button">
-              <img className="filterButton" src={filterButton} alt="filterButton" />
+          <li className="nav-item">
+            <div className="navbar-text-truncate">Filter and order</div>
+
+            <a className="nav-link nav-link-monospaced" href="#1" role="button">
+              <img
+                className="filterButton"
+                src={filterButton}
+                alt="filterButton"
+              />
             </a>
           </li>
         </ul>
-        <div class="input-group input-group-sm">
-          <div class="input-group-item">
+        <div className="input-group input-group-sm">
+          <div className="input-group-item">
             <input
-              class="form-control input-group-inset input-group-inset-after"
+              className="form-control input-group-inset input-group-inset-after"
               placeholder="Search"
               type="text"
               // style={{ width: "50%" }}
             />
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn btn-unstyled" type="button">
+            <span className="input-group-inset-item input-group-inset-item-after">
+              <button className="btn btn-unstyled" type="button">
                 <img className="search" src={search} alt="search" />
               </button>
             </span>
           </div>
         </div>
-        <div class=" navbar-text-truncate"></div>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link nav-link-monospaced" href="#1" role="button">
-              <img className="star" src={star} alt="star" />
+        <div className=" navbar-text-truncate"></div>
+        <ul className="navbar-nav ul-parent">
+          <li className="nav-item">
+            <a className="nav-link nav-link-monospaced" href="#1" role="button">
+              <ClayIcon
+                symbol="star-o"
+                style={{ color: "red" }}
+                // spritemap={spritemap}
+              />
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-monospaced" href="#1" role="button">
+          <li className="nav-item">
+            <a className="nav-link nav-link-monospaced" href="#1" role="button">
               <img className="adjust" src={adjust} alt="adjust" />
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-monospaced" href="#1" role="button">
+          <li className="nav-item">
+            <a className="nav-link nav-link-monospaced" href="#1" role="button">
               <img className="cards" src={cards} alt="cards" />
             </a>
           </li>
-          <li class="dropdown nav-item">
+          <li className="dropdown nav-item show">
             <a
-              aria-expanded="false"
+              aria-expanded="true"
               aria-haspopup="true"
-              class="dropdown-toggle nav-link nav-link-monospaced"
+              className="dropdown-toggle nav-link nav-link-monospaced"
               data-toggle="dropdown"
               href="#1"
               role="button"
             >
-              <img className="button" src={button} alt="button" />
+              <img
+                className="buttonAdd"
+                src={buttonAdd}
+                alt="buttonAdd"
+                onClick={toggleAddForm}
+              />
             </a>
+            {/* <div className="dropdown-box"> */}
             <ul
+              id="dropdown-list"
               aria-labelledby="navbarDropdownMenuLink"
-              class="dropdown-menu dropdown-menu-right"
+              className={`dropdown-menu dropdown-menu-right ul-child ${inShow}`}
             >
               <li>
-                <a class="dropdown-item" href="#1">
-                  Action
-                </a>
+                <strong>New repository</strong>
               </li>
               <li>
-                <a class="dropdown-item" href="#1">
-                  Another action
-                </a>
+                <div>
+                  Repository <span style={{ color: "red" }}>*</span>
+                </div>
               </li>
               <li>
-                <a class="dropdown-item" href="#1">
-                  Something else here
-                </a>
+                <div className="input-group input-group-sm">
+                  <div className="input-group-item input-dropdown">
+                    <input
+                      className="form-control input-group-inset input-group-inset-after search-dropdown "
+                      type="text"
+                      onChange={(event) => setInputRepo(event.target.value)}
+                      // style={{ width: "50%" }}
+                    />
+                    {/* <span className="input-group-inset-item input-group-inset-item-after">
+                      <button className="btn btn-unstyled" type="button">
+                        <img className="search" src={search} alt="search" />
+                      </button>
+                    </span> */}
+                  </div>
+                </div>
               </li>
-              <li class="dropdown-divider"></li>
+              <li className="dropdown-divider"></li>
               <li>
-                <a class="dropdown-item" href="#1">
-                  Separated link
-                </a>
+                <>
+                  <ClayButton
+                    className="btn-dropdown"
+                    displayType="secondary"
+                    onClick={toggleAddForm}
+                  >
+                    {"Cancel"}
+                  </ClayButton>
+                  <ClayButton
+                    className="btn-dropdown"
+                    onClick={addRepositoryHandler}
+                  >
+                    {"Add"}
+                  </ClayButton>
+                </>
               </li>
             </ul>
+            {/* </div> */}
           </li>
         </ul>
       </div>
     </nav>
   );
-}
+};
+
+export default Header;

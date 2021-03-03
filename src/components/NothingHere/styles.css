@@ -4,8 +4,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  
-  position: absolute;
+
   top: 0;
   bottom: 0;
   left: 0;
@@ -16,8 +15,6 @@
 .dataset-container > img {
   width: 12rem;
   height: 12rem;
-
-  /* border-radius: 50%; */
 }
 
 .dataset-container > div {
@@ -39,6 +36,11 @@
   font-size: 1rem;
   margin-top: 0.5rem;
   color: var(--secondary);
+}
+
+.text-nothing-here {
+  width: 80%;
+  text-align: center;
 }
 
 /* .dataset-container div p img {

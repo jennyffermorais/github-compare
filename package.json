@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@clayui/button": "^3.6.0",
+    "@clayui/css": "^3.25.0",
+    "@clayui/drop-down": "^3.25.0",
+    "@clayui/icon": "^3.1.0",
     "@clayui/navigation-bar": "^3.3.5",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.3",
+    "axios": "^0.21.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
@@ -36,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5"
   }
 }

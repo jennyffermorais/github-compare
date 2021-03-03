@@ -1,6 +1,11 @@
-.logo {
-  width: 24px;
-  /* justify-content: flex-start; */
+/* .logo {
+  width: 24px; 
+  justify-content: flex-start;
+} */
+
+.dropdown.buttonAdd button {
+  background-color: transparent !important;
+  border-color: transparent !important;
 }
 
 .navbar-text-truncate {
@@ -29,4 +34,64 @@
 
 .container-fluid ul:last-child {
   margin-left: 2rem;
+}
+
+.dropdown-menu.show {
+  display: flex;
+  flex-direction: column;
+  height: 212px;
+  border-radius: 4px;
+  padding: 0.5rem 1rem 0 1rem;
+  justify-content: space-around;
+}
+
+/* .input-dropdown > input {
+  width: 80% !important;
+} */
+
+.input-group-sm > .input-group-item > .form-control,
+.form-group-sm .input-group > .input-group-item > .form-control,
+.input-group-sm > .input-group-item > .form-file .btn,
+.form-group-sm .input-group > .input-group-item > .form-file .btn {
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  height: 2rem;
+  line-height: 1.5;
+  max-width: 600px !important;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+}
+
+.input-group-sm > .input-group-item > .search-dropdown {
+  max-width: 100% !important;
+  border-radius: 0.25rem !important;
+  border-right-width: 0.1rem !important;
+  padding-right: 0.75rem !important;
+}
+
+.dropdown-menu {
+  max-width: 448px;
+}
+
+.dropdown-menu.show li:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-dropdown {
+  margin-left: 1rem;
+}
+
+.ul-parent {
+  position: relative;
+  width: 500px;
+}
+
+.ul-child {
+  position: absolute;
+  width: 500px;
+  top: 45px;
+  /* bottom: 0; */
 }

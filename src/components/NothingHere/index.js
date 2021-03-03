@@ -9,7 +9,7 @@ export function NothingHere() {
     <div className="dataset-container">
       <img className="dataset" src={dataset} alt="dataset" />
 
-      <div>
+      <div className="text-nothing-here">
         <strong>There is still nothing here</strong>
         <p>Add some repositories by clicking add new repository</p>
       </div>
