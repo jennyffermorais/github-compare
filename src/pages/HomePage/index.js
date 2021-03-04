@@ -23,6 +23,9 @@ function HomePage(props) {
             repositories.map((repo) => {
               return (
                 <Cards
+                  key={repo.id}
+                  id={repo.id}
+                  isFavorite={repo.isFavorite}
                   avatar={repo.avatar_url}
                   fullname={repo.full_name}
                   stars={repo.stargazers_count}

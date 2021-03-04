@@ -1,19 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ClayIcon, { ClayIconSpriteContext } from "@clayui/icon";
 import ClayLabel from "@clayui/label";
-import "./styles.css";
 import spritemap from "../../images/icons.svg";
+
+import { useDispatch } from "react-redux";
+import { addRepoAction } from "../../store/actions";
+
+import "./styles.css";
 
 export function Cards(props) {
   console.log("TESTEEE", props);
   return (
-    <div className="container-card">
+    <div className="container-card" key={props.id}>
       <div className="repository">
         <header>
           <img id="icon" src={props.avatar} alt="avatar" />
           <strong>{props.fullname}</strong>
           <div className="repository_buttons">
-            <ClayIcon symbol="star-o" spritemap={spritemap} />
+            <ClayIcon
+              symbol={props.isFavorite ? "star" : "star-o"}
+              spritemap={spritemap}
+            />
             <ClayIcon symbol="trash" spritemap={spritemap} />
           </div>
         </header>

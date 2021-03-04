@@ -1,7 +1,13 @@
-/* .logo {
-  width: 24px; 
-  justify-content: flex-start;
-} */
+.logo {
+  margin-right: 2rem;
+}
+
+.dropup,
+.dropright,
+.dropdown,
+.dropleft {
+  margin-right: 2rem;
+}
 
 .dropdown.buttonAdd button {
   background-color: transparent !important;
@@ -13,6 +19,10 @@
   font-size: 1rem;
 }
 
+.navbar-text-truncate {
+  color: var(--secondary);
+  font-weight: 600;
+}
 .navbar {
   background-color: var(--white);
   color: var(--secondary);
@@ -92,6 +102,6 @@
 .ul-child {
   position: absolute;
   width: 500px;
-  top: 45px;
+  top: 55px;
   /* bottom: 0; */
 }

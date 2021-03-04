@@ -1,8 +1,6 @@
 import { combineReducers } from "redux";
 import { ADD_NEW_REPOSITORY } from "../actions/actionTypes";
-import {REPOSITORIES_MOCK} from "../mocks";
-
-console.log('oioioio', REPOSITORIES_MOCK)
+import { REPOSITORIES_MOCK } from "../mocks";
 
 const initialState = {
   repositories: [],
@@ -28,7 +26,14 @@ export const Reducers = combineReducers({
 
 function addRepo(repo, state) {
   const newState = state.filter((r) => r.full_name != repo.full_name);
-
   newState.push(repo);
   return newState;
+}
+
+function favoriteRepo(repo, state) {
+  const index = state.findIndex((r) => r.id == repo.id);
+
+  state[index].isFavorite = !state[index].isFavorite;
+
+  return state;
 }
