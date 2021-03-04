@@ -22,7 +22,11 @@ export function Cards(props) {
               spritemap={spritemap}
               onClick={() => actions(favRepoAction(props.id))}
             />
-            <ClayIcon symbol="trash" spritemap={spritemap} onClick={() => actions(delRepoAction(props.id))} />
+            <ClayIcon
+              symbol="trash"
+              spritemap={spritemap}
+              onClick={() => actions(delRepoAction(props.id))}
+            />
           </div>
         </header>
         <div className="dropdown-divider"></div>
@@ -50,11 +54,7 @@ export function Cards(props) {
           </li>
           <li>
             <strong>License </strong>
-            {props.license != null ? (
-              <small> {props.license}</small>
-            ) : (
-              <small>N/A</small>
-            )}
+            <small> {props.license}</small>
           </li>
           <li>
             {props.language != null ? (

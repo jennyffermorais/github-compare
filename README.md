@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+<div align="center" id="top"> 
+  <img src="./src/images/github-compare.jpg" alt="Github Compare" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+&#xa0;
 
-## Available Scripts
+  <!-- <a href="https://githubcompare.netlify.com">Demo</a> -->
+</div>
 
-In the project directory, you can run:
+<h1 align="center">Github Compare</h1>
 
-### `npm start`
+<p align="center">
+  <img alt="Principal linguagem do projeto" src="https://img.shields.io/github/languages/top/jennyffermorais/github-compare?color=56BEB8">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <img alt="Quantidade de linguagens utilizadas" src="https://img.shields.io/github/languages/count/jennyffermorais/github-compare?color=56BEB8">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  <img alt="Tamanho do repositório" src="https://img.shields.io/github/repo-size/jennyffermorais/github-compare?color=56BEB8">
 
-### `npm test`
+  <img alt="Licença" src="https://img.shields.io/github/license/jennyffermorais/github-compare?color=56BEB8">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/jennyffermorais/github-compare?color=56BEB8" /> -->
 
-### `npm run build`
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/jennyffermorais/github-compare?color=56BEB8" /> -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/jennyffermorais/github-compare?color=56BEB8" /> -->
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- Status -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- <h4 align="center">
+	🚧  Github Compare 🚀 Em construção...  🚧
+</h4>
 
-### `npm run eject`
+<hr> -->
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<p align="center">
+  <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0; 
+  <a href="#sparkles-funcionalidades">Funcionalidades</a> &#xa0; | &#xa0;
+  <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-pré-requesitos">Pré requisitos</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-começando">Começando</a> &#xa0; | &#xa0;
+  <a href="#memo-licença">Licença</a> &#xa0; | &#xa0;
+  <a href="https://github.com/jennyffermorais" target="_blank">Autor</a>
+</p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## :dart: Sobre
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Esta aplicação mostra comparações entre os repositórios selecionados, consumindo a API do GitHub. É possível adicionar repositórios, passando o nome de um usuário/nome de um repositório. Além disso, é possível favoritar repositórios, fazer filtros e excluir.
 
-## Learn More
+## :sparkles: Funcionalidades
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+:heavy_check_mark: Adicionar repositórios;\
+:heavy_check_mark: Favoritar repositórios;\
+:heavy_check_mark: Excluir repositórios;
+:heavy_check_mark: Filtrar por nome;\
+:heavy_check_mark: Listar apenas os favoritos;\
+:heavy_check_mark: Ordenar por quantidade de anos do repositório;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## :rocket: Tecnologias
 
-### Code Splitting
+As seguintes ferramentas foram usadas na construção do projeto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Node.js](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
+- [Axios](https://github.com/axios/axios)
+- [Clayui](https://clayui.com/)
+- [Redux](https://redux.js.org/)
 
-### Analyzing the Bundle Size
+## :white_check_mark: Pré requisitos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Antes de começar :checkered_flag:, você precisa ter o [Git](https://git-scm.com) e o [Node](https://nodejs.org/en/) instalados em sua maquina.
 
-### Making a Progressive Web App
+## :checkered_flag: Começando
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+# Clone este repositório
+$ git clone https://github.com/jennyffermorais/github-compare
 
-### Advanced Configuration
+# Entre na pasta
+$ cd github-compare
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Instale as dependências
+$ npm install
 
-### Deployment
+# Para iniciar o projeto
+$ npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# O app vai inicializar em <http://localhost:3000>
+```
 
-### `npm run build` fails to minify
+## :memo: Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está sob licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+Feito com :heart: por <a href="https://github.com/jennyffermorais" target="_blank">Jennyffer de Morais</a>
+
+&#xa0;
+
+<a href="#top">Voltar para o topo</a>

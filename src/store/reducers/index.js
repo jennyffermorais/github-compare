@@ -1,9 +1,18 @@
 import { combineReducers } from "redux";
-import { ADD_NEW_REPOSITORY, FAVORITE_REPOSITORY, DELETE_REPOSITORY } from "../actions/actionTypes";
+import {
+  ADD_NEW_REPOSITORY,
+  FAVORITE_REPOSITORY,
+  DELETE_REPOSITORY,
+  FILTER_BY_NAME,
+  FILTER_BY_FAVORITE,
+  SORT_BY_AGE,
+} from "../actions/actionTypes";
 import { REPOSITORIES_MOCK } from "../mocks";
 
 const initialState = {
-  repositories: [],
+  repositories: REPOSITORIES_MOCK,
+  // repositories:[]
+  filterRepositories: REPOSITORIES_MOCK,
 };
 
 const handlerRepository = (state = initialState, action) => {
@@ -28,10 +37,37 @@ const handlerRepository = (state = initialState, action) => {
   }
 };
 
+const handlerFilter = (state = initialState, action) => {
+  switch (action.type) {
+    case FILTER_BY_NAME:
+      return {
+        ...state,
+        repositories: state.repositories.filter((repo) =>
+          repo.full_name.toLowerCase().includes(action.name.toLowerCase())
+        ),
+      };
+    case FILTER_BY_FAVORITE:
+      return {
+        ...state,
+        filterRepositories: state.repositories.filter(
+          (repo) => repo.isFavorite
+        ),
+      };
+    case SORT_BY_AGE:
+      return {
+        ...state,
+        filterRepositories: addRepo(action.repos, state.repositories),
+      };
+    default:
+      return state;
+  }
+};
+
 //A chave do objeto é o nome na qual o estado será acessado pela aplicação
 //O valor é o Reducer, função pura que filtra os dados
 export const Reducers = combineReducers({
   handlerRepository: handlerRepository,
+  handlerFilter: handlerFilter,
 });
 
 function addRepo(repo, state) {
@@ -41,6 +77,7 @@ function addRepo(repo, state) {
 }
 
 function favoriteRepo(id, state) {
+  console.log('favorite', id, state)
   const index = state.findIndex((r) => r.id == id);
 
   state[index].isFavorite = !state[index].isFavorite;
@@ -51,8 +88,7 @@ function favoriteRepo(id, state) {
 function deleteRepo(id, state) {
   const index = state.findIndex((r) => r.id == id);
 
-  if(index <= -1)
-    return state;
+  if (index <= -1) return state;
 
   state.splice(index, 1);
 

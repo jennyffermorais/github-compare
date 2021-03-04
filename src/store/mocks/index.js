@@ -8,7 +8,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-01-27T09:13:04Z",
     updated_at: "2021-03-03T22:48:07Z",
-    license: null,
+    license: "N/A",
     language: null,
   },
   {
@@ -20,7 +20,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-07-29T16:09:21Z",
     updated_at: "2020-08-05T13:39:54Z",
-    license: null,
+    license: "N/A",
     language: "JavaScript",
   },
   {
@@ -32,7 +32,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2019-11-10T17:52:30Z",
     updated_at: "2020-06-11T13:06:47Z",
-    license: null,
+    license: "N/A",
     language: "HTML",
   },
   {
@@ -44,7 +44,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-08-25T22:10:23Z",
     updated_at: "2020-09-02T21:03:22Z",
-    license: null,
+    license: "N/A",
     language: "Python",
   },
   {
@@ -56,7 +56,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-06-25T01:14:47Z",
     updated_at: "2020-07-24T02:15:31Z",
-    license: null,
+    license: "N/A",
     language: "HTML",
   },
   {
@@ -68,7 +68,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-07-27T18:00:11Z",
     updated_at: "2020-07-28T22:09:44Z",
-    license: null,
+    license: "N/A",
     language: "CSS",
   },
   {
@@ -80,7 +80,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-08-13T17:12:52Z",
     updated_at: "2020-08-13T17:12:54Z",
-    license: null,
+    license: "N/A",
     language: null,
   },
   {
@@ -92,7 +92,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-12-14T19:26:49Z",
     updated_at: "2020-12-14T19:26:51Z",
-    license: null,
+    license: "N/A",
     language: null,
   },
   {
@@ -104,7 +104,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-07-11T01:32:17Z",
     updated_at: "2020-07-24T02:15:35Z",
-    license: null,
+    license: "N/A",
     language: "HTML",
   },
   {
@@ -116,7 +116,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-08-21T03:16:49Z",
     updated_at: "2020-08-23T20:34:25Z",
-    license: null,
+    license: "N/A",
     language: "JavaScript",
   },
   {
@@ -128,7 +128,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-08-23T20:27:15Z",
     updated_at: "2020-08-23T20:29:48Z",
-    license: null,
+    license: "N/A",
     language: "JavaScript",
   },
   {
@@ -140,7 +140,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-08-30T17:10:50Z",
     updated_at: "2020-09-03T23:45:05Z",
-    license: null,
+    license: "N/A",
     language: "JavaScript",
   },
   {
@@ -152,7 +152,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-09-16T22:30:57Z",
     updated_at: "2020-09-18T01:58:04Z",
-    license: null,
+    license: "N/A",
     language: "CSS",
   },
   {
@@ -164,7 +164,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2021-02-28T17:24:21Z",
     updated_at: "2021-03-03T23:23:06Z",
-    license: null,
+    license: "N/A",
     language: "JavaScript",
   },
   {
@@ -176,7 +176,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-06-29T16:11:23Z",
     updated_at: "2020-06-29T17:29:26Z",
-    license: null,
+    license: "N/A",
     language: "JavaScript",
   },
   {
@@ -188,7 +188,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-05-23T23:28:50Z",
     updated_at: "2020-06-15T12:59:26Z",
-    license: null,
+    license: "N/A",
     language: "HTML",
   },
   {
@@ -200,7 +200,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-08-15T20:19:00Z",
     updated_at: "2020-08-17T00:33:15Z",
-    license: null,
+    license: "N/A",
     language: "TypeScript",
   },
   {
@@ -212,7 +212,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-08-14T21:53:16Z",
     updated_at: "2020-08-21T18:11:20Z",
-    license: null,
+    license: "N/A",
     language: "JavaScript",
   },
   {
@@ -224,7 +224,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-07-11T19:09:40Z",
     updated_at: "2021-01-27T23:21:04Z",
-    license: null,
+    license: "N/A",
     language: null,
   },
   {
@@ -236,7 +236,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-06-17T11:53:16Z",
     updated_at: "2020-09-02T13:42:31Z",
-    license: null,
+    license: "N/A",
     language: "HTML",
   },
   {
@@ -248,7 +248,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-08-24T18:47:01Z",
     updated_at: "2020-08-24T22:32:22Z",
-    license: null,
+    license: "N/A",
     language: "Python",
   },
   {
@@ -260,13 +260,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-07-08T14:25:16Z",
     updated_at: "2020-07-24T02:15:26Z",
-    license: {
-      key: "mit",
-      name: "MIT License",
-      spdx_id: "MIT",
-      url: "https://api.github.com/licenses/mit",
-      node_id: "MDc6TGljZW5zZTEz",
-    },
+    license: "MIT",
     language: "JavaScript",
   },
   {
@@ -278,7 +272,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2021-02-25T20:33:33Z",
     updated_at: "2021-02-25T20:34:19Z",
-    license: null,
+    license: "N/A",
     language: "TypeScript",
   },
   {
@@ -290,7 +284,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-12-01T01:58:32Z",
     updated_at: "2020-12-01T01:58:33Z",
-    license: null,
+    license: "N/A",
     language: null,
   },
   {
@@ -302,7 +296,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-08-09T20:10:07Z",
     updated_at: "2020-08-09T20:10:09Z",
-    license: null,
+    license: "N/A",
     language: null,
   },
   {
@@ -314,7 +308,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-10-11T17:35:01Z",
     updated_at: "2020-10-17T18:02:13Z",
-    license: null,
+    license: "N/A",
     language: "JavaScript",
   },
   {
@@ -326,7 +320,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-10-24T12:55:08Z",
     updated_at: "2020-10-24T12:55:10Z",
-    license: null,
+    license: "N/A",
     language: null,
   },
   {
@@ -338,7 +332,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-11-07T16:29:57Z",
     updated_at: "2020-11-07T16:29:58Z",
-    license: null,
+    license: "N/A",
     language: null,
   },
   {
@@ -350,7 +344,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-11-07T16:30:32Z",
     updated_at: "2020-11-07T16:30:33Z",
-    license: null,
+    license: "N/A",
     language: null,
   },
   {
@@ -362,7 +356,7 @@ export const REPOSITORIES_MOCK = [
     open_issues: 0,
     created_at: "2020-11-08T12:35:22Z",
     updated_at: "2020-11-12T23:49:14Z",
-    license: null,
+    license: "N/A",
     language: "JavaScript",
-  }
+  },
 ];

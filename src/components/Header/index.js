@@ -14,7 +14,11 @@ import spritemap from "../../images/icons.svg";
 
 import gitHubService from "../../services/github-service";
 import { useSelector, useDispatch } from "react-redux";
-import { addRepoAction } from "../../store/actions";
+import {
+  addRepoAction,
+  filterByName,
+  filterByFavorite,
+} from "../../store/actions";
 
 import "./styles.css";
 import "../../styles/global.css";
@@ -41,11 +45,19 @@ const Header = (props) => {
         open_issues: repo.data.open_issues,
         created_at: repo.data.created_at,
         updated_at: repo.data.updated_at,
-        license: repo.data.license,
+        license: repo.data.license ? repo.data.license.spdx_id : "N/A",
         language: repo.data.language,
       };
       actions(addRepoAction(newRepo));
     });
+  }
+
+  function searchRepo(event) {
+    actions(filterByName(event.target.value));
+  }
+
+  function showFavorites(event) {
+    actions(filterByFavorite(event.target.value));
   }
 
   const filterItems = [
@@ -119,6 +131,7 @@ const Header = (props) => {
                 aria-label="Search"
                 className="form-control input-group-inset input-group-inset-after"
                 type="text"
+                onChange={(event) => searchRepo(event)}
               />
               <ClayInput.GroupInsetItem after tag="span">
                 <ClayButtonWithIcon
@@ -156,7 +169,11 @@ const Header = (props) => {
               displayType="unstyled"
               onClick={() => {}}
             >
-              <ClayIcon symbol="star-o" spritemap={spritemap} />{" "}
+              <ClayIcon
+                symbol="star-o"
+                spritemap={spritemap}
+                onClick={(event) => showFavorites(event)}
+              />{" "}
             </ClayButton>
           </ClayManagementToolbar.Item>
 

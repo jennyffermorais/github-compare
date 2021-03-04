@@ -1,7 +1,4 @@
 import React from "react";
-
-//import gitHubService from "../../services/github-service";
-
 import { Cards } from "../../components/Cards";
 import Header from "../../components/Header";
 import { NothingHere } from "../../components/NothingHere";
@@ -9,7 +6,7 @@ import { useSelector } from "react-redux";
 
 function HomePage(props) {
   const repositories = useSelector((state) => {
-    return state.handlerRepository.repositories;
+    return state.handlerFilter.repositories;
   });
 
   return (
@@ -22,7 +19,7 @@ function HomePage(props) {
           ) : (
             repositories.map((repo) => {
               return (
-                <Cards 
+                <Cards
                   key={repo.id}
                   id={repo.id}
                   isFavorite={repo.isFavorite}
