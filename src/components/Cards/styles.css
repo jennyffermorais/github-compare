@@ -4,7 +4,7 @@
   justify-content: center;
 
   margin-top: 24px;
-  /* margin-bottom: 2rem; */
+
   flex-wrap: wrap;
 }
 
@@ -17,11 +17,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* align-items: center; */
+
   width: 321px;
   word-wrap: break-word;
-
-  /* padding: 5rem 5rem; */
 }
 
 .repository header {
@@ -41,7 +39,7 @@
   margin: 0 !important;
 }
 
-.repository header img#icon {
+.repository header img {
   width: 30px;
   height: 30px;
   margin-right: 0.5rem;
@@ -56,7 +54,7 @@
 .repository_buttons svg {
   display: flex;
   flex-direction: row;
-  /* margin: 1.3rem auto; */
+
   cursor: pointer;
 }
 
@@ -85,5 +83,4 @@
   color: var(--black);
   font-weight: bold;
   font-size: 1rem;
-  /* padding: 0.5rem 2rem; */
 }

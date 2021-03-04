@@ -1,15 +1,9 @@
-/* .logo {
-  width: 24px; 
-  justify-content: flex-start;
-} */
-
 .dropdown.buttonAdd button {
   background-color: transparent !important;
   border-color: transparent !important;
 }
 
 .navbar-text-truncate {
-  /* margin-right: 50px; */
   font-size: 1rem;
 }
 
@@ -23,10 +17,6 @@
   font-size: 1rem !important;
   color: var(--secondary) !important;
 }
-
-/* .input-group-item {
-  width: 10% !important;
-} */
 
 .navbar-nav > li {
   margin-right: 1rem;
@@ -44,10 +34,6 @@
   padding: 0.5rem 1rem 0 1rem;
   justify-content: space-around;
 }
-
-/* .input-dropdown > input {
-  width: 80% !important;
-} */
 
 .input-group-sm > .input-group-item > .form-control,
 .form-group-sm .input-group > .input-group-item > .form-control,
@@ -93,5 +79,4 @@
   position: absolute;
   width: 500px;
   top: 45px;
-  /* bottom: 0; */
 }

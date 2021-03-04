@@ -22,7 +22,7 @@ function HomePage(props) {
           ) : (
             repositories.map((repo) => {
               return (
-                <Cards
+                <Cards 
                   key={repo.id}
                   id={repo.id}
                   isFavorite={repo.isFavorite}

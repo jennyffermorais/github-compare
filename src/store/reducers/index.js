@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { ADD_NEW_REPOSITORY } from "../actions/actionTypes";
+import { ADD_NEW_REPOSITORY, FAVORITE_REPOSITORY, DELETE_REPOSITORY } from "../actions/actionTypes";
 import { REPOSITORIES_MOCK } from "../mocks";
 
 const initialState = {
@@ -12,6 +12,16 @@ const handlerRepository = (state = initialState, action) => {
       return {
         ...state,
         repositories: addRepo(action.repos, state.repositories),
+      };
+    case FAVORITE_REPOSITORY:
+      return {
+        ...state,
+        repositories: favoriteRepo(action.id, state.repositories),
+      };
+    case DELETE_REPOSITORY:
+      return {
+        ...state,
+        repositories: deleteRepo(action.id, state.repositories),
       };
     default:
       return state;
@@ -30,10 +40,21 @@ function addRepo(repo, state) {
   return newState;
 }
 
-function favoriteRepo(repo, state) {
-  const index = state.findIndex((r) => r.id == repo.id);
+function favoriteRepo(id, state) {
+  const index = state.findIndex((r) => r.id == id);
 
   state[index].isFavorite = !state[index].isFavorite;
 
-  return state;
+  return state.slice();
+}
+
+function deleteRepo(id, state) {
+  const index = state.findIndex((r) => r.id == id);
+
+  if(index <= -1)
+    return state;
+
+  state.splice(index, 1);
+
+  return state.slice();
 }

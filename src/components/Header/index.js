@@ -9,9 +9,7 @@ import ClayManagementToolbar, {
 } from "@clayui/management-toolbar";
 
 import logo from "../../images/Vector.svg";
-import search from "../../images/search.svg";
 import buttonAdd from "../../images/buttonAdd.svg";
-import filterButton from "../../images/filter-button.svg";
 import spritemap from "../../images/icons.svg";
 
 import gitHubService from "../../services/github-service";
@@ -34,7 +32,7 @@ const Header = (props) => {
   function addRepositoryHandler() {
     gitHubService(inputRepo).then((repo) => {
       const newRepo = {
-        id: repo.id,
+        id: repo.data.id,
         isFavorite: false,
         avatar_url: repo.data.owner.avatar_url,
         full_name: repo.data.full_name,
@@ -82,11 +80,13 @@ const Header = (props) => {
     <>
       <ClayManagementToolbar>
         <ClayManagementToolbar.ItemList>
-          <img className="logo" src={logo} alt="logo" />
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <img className="logo" src={logo} alt="logo" />
+            </li>
+            <li className="nav-item navbar-text-truncate">Github Compare</li>
+          </ul>
 
-          <li className="nav-item">
-            <div className="navbar-text-truncate">Github Compare</div>
-          </li>
           <ClayDropDownWithItems
             items={filterItems}
             spritemap={spritemap}
@@ -204,7 +204,6 @@ const Header = (props) => {
                 onClick={toggleAddForm}
               />
             </a>
-            {/* <div className="dropdown-box"> */}
             <ul
               id="dropdown-list"
               aria-labelledby="navbarDropdownMenuLink"
@@ -225,13 +224,7 @@ const Header = (props) => {
                       className="form-control input-group-inset input-group-inset-after search-dropdown "
                       type="text"
                       onChange={(event) => setInputRepo(event.target.value)}
-                      // style={{ width: "50%" }}
                     />
-                    {/* <span className="input-group-inset-item input-group-inset-item-after">
-                      <button className="btn btn-unstyled" type="button">
-                        <img className="search" src={search} alt="search" />
-                      </button>
-                    </span> */}
                   </div>
                 </div>
               </li>
@@ -254,7 +247,6 @@ const Header = (props) => {
                 </>
               </li>
             </ul>
-            {/* </div> */}
           </li>
         </ClayManagementToolbar.ItemList>
       </ClayManagementToolbar>
