@@ -6,10 +6,14 @@
 
 .main {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   height: calc(100vh - 64px);
   width: 100%;
-  align-items: center;
+
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+ 
 }
 
 .container section {

@@ -1,33 +1,24 @@
 import React, { useState, useEffect } from "react";
+import ClayIcon, { ClayIconSpriteContext } from "@clayui/icon";
+import ClayLabel from "@clayui/label";
 import "./styles.css";
-import favorite from "../../images/favorite.svg";
-import remove from "../../images/remove.svg";
+import spritemap from "../../images/icons.svg";
 
 export function Cards(props) {
   console.log("TESTEEE", props);
   return (
-    <div className="container-cards">
+    <div className="container-card">
       <div className="repository">
         <header>
           <img id="icon" src={props.avatar} alt="avatar" />
           <strong>{props.fullname}</strong>
           <div className="repository_buttons">
-            <img
-              //   onClick={handleFavorite}
-              id="favorite"
-              src={favorite}
-              alt="favorite-button"
-            />
-            <img
-              //   onClick={(e) => {
-              //     handleRemoveRepo(repository.id);
-              //   }}
-              id="remove"
-              src={remove}
-              alt="remove-button"
-            />
+            <ClayIcon symbol="star-o" spritemap={spritemap} />
+            <ClayIcon symbol="trash" spritemap={spritemap} />
           </div>
         </header>
+        <div className="dropdown-divider"></div>
+
         <ul>
           <li>
             {" "}
@@ -50,12 +41,21 @@ export function Cards(props) {
             <strong>Last commit</strong> <small>{props.lastCommit} </small>
           </li>
           <li>
-            {" "}
-            <strong>License</strong> <small> {props.license}</small>
+            <strong>License </strong>
+            {props.license != null ? (
+              <small> {props.license}</small>
+            ) : (
+              <small>N/A</small>
+            )}
           </li>
           <li>
-            {" "}
-            <small>{props.language}</small>
+            {props.language != null ? (
+              <ClayLabel displayType="warning" spritemap={spritemap}>
+                {props.language}
+              </ClayLabel>
+            ) : (
+              ""
+            )}
           </li>
         </ul>
       </div>

@@ -1,5 +1,8 @@
 import { combineReducers } from "redux";
 import { ADD_NEW_REPOSITORY } from "../actions/actionTypes";
+import {REPOSITORIES_MOCK} from "../mocks";
+
+console.log('oioioio', REPOSITORIES_MOCK)
 
 const initialState = {
   repositories: [],

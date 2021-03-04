@@ -6,14 +6,12 @@ import "./styles.css";
 import "../../styles/global.css";
 import logo from "../../images/Vector.svg";
 import search from "../../images/search.svg";
-import star from "../../images/star.svg";
-import adjust from "../../images/adjust.svg";
-import cards from "../../images/cards.svg";
 import buttonAdd from "../../images/buttonAdd.svg";
 import filterButton from "../../images/filter-button.svg";
+import spritemap from "../../images/icons.svg";
 
 import { connect, useSelector, useDispatch } from "react-redux";
-import { addRepoAction } from "../../actions";
+import { addRepoAction } from "../../store/actions";
 
 const Header = (props) => {
   let [inShow, setInShow] = useState("");
@@ -27,7 +25,18 @@ const Header = (props) => {
 
   function addRepositoryHandler() {
     gitHubService(inputRepo).then((repo) => {
-      actions(addRepoAction(repo.data));
+      const newRepo = {
+        avatar_url: repo.data.owner.avatar_url,
+        full_name: repo.data.full_name,
+        stargazers_count: repo.data.stargazers_count,
+        forks_count: repo.data.forks_count,
+        open_issues: repo.data.open_issues,
+        created_at: repo.data.created_at,
+        updated_at: repo.data.updated_at,
+        license: repo.data.license,
+        language: repo.data.language,
+      };
+      actions(addRepoAction(newRepo));
     });
   }
 
@@ -76,21 +85,17 @@ const Header = (props) => {
         <ul className="navbar-nav ul-parent">
           <li className="nav-item">
             <a className="nav-link nav-link-monospaced" href="#1" role="button">
-              <ClayIcon
-                symbol="star-o"
-                style={{ color: "red" }}
-                // spritemap={spritemap}
-              />
+              <ClayIcon symbol="star-o" spritemap={spritemap} />
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link nav-link-monospaced" href="#1" role="button">
-              <img className="adjust" src={adjust} alt="adjust" />
+              <ClayIcon symbol="adjust" spritemap={spritemap} />{" "}
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link nav-link-monospaced" href="#1" role="button">
-              <img className="cards" src={cards} alt="cards" />
+              <ClayIcon symbol="cards2" spritemap={spritemap} />{" "}
             </a>
           </li>
           <li className="dropdown nav-item show">

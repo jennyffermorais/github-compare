@@ -1,15 +1,15 @@
-.container-cards {
+.container-card {
   display: flex;
   flex-direction: row;
   justify-content: center;
 
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 24px;
+  /* margin-bottom: 2rem; */
   flex-wrap: wrap;
 }
 
 .repository {
-  margin-right: 4rem;
+  margin-right: 2rem;
   margin-bottom: 2rem;
   border-radius: 4px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -17,53 +17,71 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
+  width: 321px;
+  word-wrap: break-word;
+
   /* padding: 5rem 5rem; */
 }
 
 .repository header {
-  padding: 0 30px;
+  padding: 0 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 50px;
+}
+
+.repository header > strong {
+  width: 200px;
+  word-wrap: break-word;
+}
+
+.repository > .dropdown-divider {
+  margin: 0 !important;
 }
 
 .repository header img#icon {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   margin-right: 0.5rem;
 }
 
 .repository_buttons {
   display: flex;
   flex-direction: row;
-  margin: 1.3rem auto 1.3rem 1.3rem;
+  justify-content: flex-end;
 }
 
-.repository_buttons img {
+.repository_buttons svg {
   display: flex;
   flex-direction: row;
-  margin: 1.3rem auto;
+  /* margin: 1.3rem auto; */
   cursor: pointer;
 }
 
-.repository_buttons img:first-child {
+.repository_buttons svg:first-child {
   margin-right: 1rem;
 }
 
-strong {
+.repository strong {
   color: var(--black);
 }
 
-strong {
-  font-size: 1rem;
+.repository strong {
+  font-size: 0.8rem;
 }
 
-ul {
+.repository ul {
   list-style: none;
+  height: 178px;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-li {
+.repository li {
   color: var(--black);
   font-weight: bold;
   font-size: 1rem;

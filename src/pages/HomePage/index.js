@@ -23,7 +23,7 @@ function HomePage(props) {
             repositories.map((repo) => {
               return (
                 <Cards
-                  avatar={repo.owner.avatar_url}
+                  avatar={repo.avatar_url}
                   fullname={repo.full_name}
                   stars={repo.stargazers_count}
                   forks={repo.forks_count}
